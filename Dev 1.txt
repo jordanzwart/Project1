@@ -1,0 +1,59 @@
+package Dev1;
+
+import java.util.Scanner;
+
+public class Dev1 {
+	public static void main (String[] args) {
+	Scanner num = new Scanner(System.in);	
+		
+		String numOne;
+		char indOne;
+		String numTwo;
+		char indTwo;
+		char indOneTwo;
+		char indTwoTwo;
+		char indOneThree;
+		char indTwoThree;
+		
+//User enters two three digit numbers for the code to run through		
+		System.out.println("Enter Two Three digit numbers: ");
+		System.out.println("Enter first number: ");
+		
+		numOne = num.next();
+		
+		System.out.println("Enter second number: ");
+		numTwo = num.next();
+//Code seperates each character of the users 3 digit input. Then adds them together. 		
+		indOne = numOne.charAt(0);
+		indTwo = numTwo.charAt(0);
+		
+		indOneTwo = numOne.charAt(1);
+		indTwoTwo = numTwo.charAt(1);
+		
+		indOneThree = numOne.charAt(2);
+		indTwoThree = numTwo.charAt(2);
+		
+		int resultZero = ( Character.getNumericValue(indOne) +  Character.getNumericValue(indTwo));
+		int resultOne = ( Character.getNumericValue(indOneTwo) + Character.getNumericValue(indTwoTwo));
+		int resultTwo = (Character.getNumericValue(indOneThree) + Character.getNumericValue(indTwoThree));
+//System prints out each individual result so the user can see if he has made an error		
+		System.out.println(resultZero);
+		System.out.println(resultOne);
+		System.out.println(resultTwo);
+//Code will print true if the digits line up, if not it will print false.		
+		if (resultZero == resultOne && resultTwo == resultOne) {
+			System.out.print("True");
+		}
+		else {
+			System.out.print("False");
+		}
+		
+			
+
+
+
+
+
+
+}
+}	
